@@ -1,0 +1,46 @@
+body{
+    background-color:#0e1a2e;
+    margin: 20% 33%;
+    color: #faac2f;
+    font-family:Sans-serif;
+
+}
+#mainBox {
+    background-color: #223657;
+    border-radius: 20px;
+    padding: 30px 40px 50px 40px;
+    border: 3px solid;
+    position: fixed;
+}
+
+h1{
+    font-size: 50px;
+    float:left;
+    color: white;
+}
+
+img {
+    float:right;
+    height: 100px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #406399;
+    color: white;
+    border: none;
+    margin: 0px 10px 0px 0px;
+}
+
+#user {
+    display: block;
+    float:left;
+}
+
+#top{
+    overflow: auto;
+}
+/* div {
+    border: 3px solid;
+} */
