@@ -16,20 +16,19 @@ body{
 #info{
     position: absolute;
     border: 3px solid;
-    bottom: 50%;
     height: 200px;
     min-width: 350px;
     top: 5%;
     border-radius: 20px;
     border-color: #faac2f;
     background-color: #11234b;
-    padding: 10% 5%;
+    padding: 50px 5%;
 }
 .macro{
     height: 100px;
     width: 150px;
     border: 3px solid;
-    float: left;
+    /* float: left; */
     padding: 33px;
     margin: 0px 3%;
     border-radius: 15px;
@@ -41,11 +40,35 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 30%;
+    /* border: 3px solid; */
+}
+
+.macro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    /* border: 3px solid; */
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    /* border: 3px solid; */
+}
+
+.log-container{
+    margin-top:30px;
+    bottom: 0px;
+    border: 3px solid;
+    /* border: 3px solid; */
 }
 
 h3, .label{
-    color: white;
+    color: rgb(255, 255, 255);
     font-family:Sans-serif; 
     display: block;
     text-align:center;
@@ -60,4 +83,42 @@ h3{
     font-size: 18px;
     margin-top: 30px;
 }
+
+button{
+    background-color:#faac2f;
+    border-color:#0e1a2e; 
+    border: 10px solid;
+    border-radius: 20px;
+    min-width:200px;
+    margin: 0px 20px;
+    padding: 20px;
+    font-size: 20px;
+    color: #0e1a2e;
+    font-family:Sans-serif;
+    font-weight: 800;
+}
+
+button:hover{
+    background-color:#0e1a2e;
+    border-color: #faac2f;
+    color:#faac2f;
+    cursor: pointer;
+}
+
+#log{
+    border:3px solid blue;
+    width:100%;
+}
+
+.entryOdd{
+    background-color:#406399;
+    padding: 15px;
+}
+
+.entryEven{
+   background-color: #223657;
+   padding: 15px;
+}
+
+
 
