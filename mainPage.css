@@ -21,7 +21,7 @@ body{
     top: 5%;
     border-radius: 20px;
     border-color: #faac2f;
-    background-color: #11234b;
+    background-color: #223657;
     padding: 50px 5%;
 }
 .macro{
@@ -32,7 +32,7 @@ body{
     padding: 33px;
     margin: 0px 3%;
     border-radius: 15px;
-    background-color:#081b39;
+    background-color:#16294a;
     border: none;
     text-align:center;
 }
@@ -64,7 +64,25 @@ body{
     margin-top:30px;
     bottom: 0px;
     border: 3px solid;
+    display:none;
     /* border: 3px solid; */
+}
+
+.calc-container{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* border: 3px solid; */
+}
+.form-container{
+    display:absolute;
+    height: 600px;
+    width: 600px;
+    border-radius: 15px;
+    padding: 30px;
+    border: 3px solid #faac2f;
+    background-color: #223657;
 }
 
 h3, .label{
@@ -85,9 +103,9 @@ h3{
 }
 
 button{
-    background-color:#faac2f;
+    background-color:#406399;
     border-color:#0e1a2e; 
-    border: 10px solid;
+    border: 5px solid;
     border-radius: 20px;
     min-width:200px;
     margin: 0px 20px;
@@ -96,6 +114,7 @@ button{
     color: #0e1a2e;
     font-family:Sans-serif;
     font-weight: 800;
+    transition: background-color .5s ease;
 }
 
 button:hover{
@@ -103,6 +122,10 @@ button:hover{
     border-color: #faac2f;
     color:#faac2f;
     cursor: pointer;
+}
+
+button:active{
+    background-color:#406399;
 }
 
 #log{
@@ -120,5 +143,88 @@ button:hover{
    padding: 15px;
 }
 
+.calcInput{
+    display:flex;
+    margin: 20px 40px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #406399;
+    color: white;
+    transition: background-color .5s ease;
+    font-weight: 600;
+}
+.calcInput:hover{
+    background-color:white;
+    color:#406399;
+}
+input::placeholder{
+    color:#0e1a2e;
+}
 
+.customRadio input[type="radio"]{
+    display: none;
+}
 
+.customRadio {
+    position: relative;
+    padding-left: 100px;
+    cursor: pointer;
+    display: block;
+}
+
+.radioIndicator {
+    position: absolute;
+    left: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: #406399;
+    border-radius: 50%;
+    transition: background-color .5s ease;
+}
+
+.customRadio{
+    font-weight:800;
+    color: white;
+    font-family: Sans-serif;
+}
+.customRadio:hover .radioIndicator{
+    background-color:white;
+    cursor:pointer;
+}
+
+.customRadio input[type="radio"]:checked + .radioIndicator{
+    background-color: #faac2f;
+}
+
+.radLab{
+    margin: 0px 32px;
+}
+
+h4{
+    margin-left: 30px;
+    font-weight:800;
+    color: #faac2f;
+    font-family: Sans-serif;
+}
+
+#goals{
+    margin-left: 80px;
+}
+#exercise{
+    margin-left: 40px;
+}
+#radios{
+    display: flex;
+}
+#textsub{
+    display: flex;
+}
+.subbut{
+    margin-top:80px;
+    border-radius: 50%;
+    transition: background-color .9s ease;
+}
+.subbut:hover{
+    background-color:#16294a;
+}
