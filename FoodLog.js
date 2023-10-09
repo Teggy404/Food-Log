@@ -2,6 +2,16 @@ const logDiv = document.getElementById('logs');
 const calcDiv = document.getElementById('calculator');
 const entryDiv = document.getElementById('entry');
 
+var userInfo ={
+    Oscar:{
+        carb: 0,
+        protein: 0,
+        fat: 0,
+        goalCarb: 0,
+        goalProtein: 0,
+        goalFat: 0
+    }
+};
 function calculatorClick (){
     if(calcDiv.className != 'hidden') {
         calcDiv.className = 'hidden';
@@ -66,6 +76,11 @@ function setMacros(weight, height, age, activity, goal){
     document.getElementById('fatgoal').innerHTML = Math.floor(fat);
 }
 
+function log(foodName, foodCarb, foodProtein, foodFat){
+    document.getElementById('carb').innerHTML += foodCarb;
+    document.getElementById('protein').innerHTML += foodProtein;
+    document.getElementById('fat').innerHTML += foodFat;
+}
 document.getElementById('calcdata').addEventListener('submit', function(e){
     e.preventDefault();
     let weight = e.target.elements.weight.value;
@@ -74,4 +89,13 @@ document.getElementById('calcdata').addEventListener('submit', function(e){
     let activity = e.target.elements.activity.value;
     let goal = e.target.elements.goal.value;
     setMacros(weight, height, age, activity, goal);
+});
+
+document.getElementById('logdata').addEventListener('submit', function(e){
+    e.preventDefault();
+    let foodName = e.target.elements.foodName.value;
+    let foodCarb = e.target.elements.foodCarb.value;
+    let foodProtein = e.target.elements.foodProtein.Value;
+    let foodFat = e.target.elements.foodFat.value;
+
 });

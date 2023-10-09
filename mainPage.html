@@ -11,15 +11,15 @@
                 <div id="info">
                     <div class="macro-container">
                         <div class="macro">
-                            <h3> <span id="carb">999</span>/<span id="carbgoal">999</span>g</h3>
+                            <h3> <span id="carb">0</span>/<span id="carbgoal">999</span>g</h3>
                             <b class="label">Carbs</b>
                         </div>
                         <div class="macro">
-                            <h3> <span id="protein">999</span>/<span id="proteingoal">999</span>g</h3>
+                            <h3> <span id="protein">0</span>/<span id="proteingoal">999</span>g</h3>
                             <b class="label">Protein</b>
                         </div>
                         <div class="macro">
-                            <h3> <span id="fat">999</span>/<span id="fatgoal">999</span>g</h3>
+                            <h3> <span id="fat">0</span>/<span id="fatgoal">999</span>g</h3>
                             <b class="label">Fat</b>
                     
                         </div>
@@ -96,17 +96,17 @@
                 </form>
             </div>
             <div id="entry" class="hidden">
-                <form class="form-container">
+                <form class="form-container" id="logdata">
                     <div class="textsub">
                         <div>
                             <h4>Food Name</h4>
-                            <input type="text" id="foodName" class="logInput" placeholder="Name">
+                            <input type="text" id="foodName" class="logInput" placeholder="Name" name="foodName">
                             <h4>Carbohydrates (Grams)</h4>
-                            <input type="number" id="foodName" class="logInput" placeholder="Name">
+                            <input type="number" id="foodName" class="logInput" placeholder="Carbohydrates" name="foodCarb">
                             <h4>Protein (Grams)</h4>
-                            <input type="number" id="foodName" class="logInput" placeholder="Name">
+                            <input type="number" id="foodName" class="logInput" placeholder="Protein" name="foodProtein">
                             <h4>Fat (Grams)</h4>
-                            <input type="number" id="foodName" class="logInput" placeholder="Name">
+                            <input type="number" id="foodName" class="logInput" placeholder="Fat" name="foodFat">
                         </div>
                         <div>
                             <input type="image" src="theDog.png" class="subbut">
@@ -115,12 +115,6 @@
                 </form>
             </div>
             <div id="logs" class="log-container">
-                <div class="entryOdd">
-                    This is an entry
-                 </div>
-                 <div class="entryEven">
-                    This is an entry
-                 </div>
             </div>
         </div>
         <script src="FoodLog.js"></script>
