@@ -1,6 +1,13 @@
 const logDiv = document.getElementById('logs');
 const calcDiv = document.getElementById('calculator');
 const entryDiv = document.getElementById('entry');
+const carbNum = document.getElementById('carb');
+const carbGoalNum = document.getElementById('carbgoal');
+const proteinNum = document.getElementById('protein');
+const proteinGoalNum = document.getElementById('proteingoal');
+const fatNum = document.getElementById('fat');
+const fatGoalNum = document.getElementById('fatgoal');
+let userName = "Oscar";
 
 var userInfo ={
     Oscar:{
@@ -12,6 +19,15 @@ var userInfo ={
         goalFat: 0
     }
 };
+
+function updateNum(){
+    carbNum.innerHTML = userInfo[userName].carb;
+    carbGoalNum.innerHTML = userInfo[userName].goalCarb;
+    proteinNum.innerHTML = userInfo[userName].protein;
+    proteinGoalNum.innerHTML = userInfo[userName].goalProtein;
+    fatNum.innerHTML = userInfo[userName].fat;
+    fatGoalNum.innerHTML = userInfo[userName].goalFat;
+}
 function calculatorClick (){
     if(calcDiv.className != 'hidden') {
         calcDiv.className = 'hidden';
@@ -71,16 +87,21 @@ function setMacros(weight, height, age, activity, goal){
     let protein = (TDEE*.30)/4;
     let fat = (TDEE*.30)/9;
     console.log(TDEE);
-    document.getElementById('carbgoal').innerHTML = Math.floor(carb);
-    document.getElementById('proteingoal').innerHTML = Math.floor(protein);
-    document.getElementById('fatgoal').innerHTML = Math.floor(fat);
+    userInfo[userName].goalCarb= Math.floor(carb);
+    userInfo[userName].goalProtein = Math.floor(protein);
+    userInfo[userName].goalFat = Math.floor(fat);
+    updateNum();
 }
 
 function log(foodName, foodCarb, foodProtein, foodFat){
-    document.getElementById('carb').innerHTML += foodCarb;
-    document.getElementById('protein').innerHTML += foodProtein;
-    document.getElementById('fat').innerHTML += foodFat;
+    userInfo[userName].carb += Number(foodCarb);
+    userInfo[userName].protein += Number(foodProtein);
+    userInfo[userName].fat += Number(foodFat);
+    updateNum();
 }
+
+updateNum();
+
 document.getElementById('calcdata').addEventListener('submit', function(e){
     e.preventDefault();
     let weight = e.target.elements.weight.value;
@@ -95,7 +116,8 @@ document.getElementById('logdata').addEventListener('submit', function(e){
     e.preventDefault();
     let foodName = e.target.elements.foodName.value;
     let foodCarb = e.target.elements.foodCarb.value;
-    let foodProtein = e.target.elements.foodProtein.Value;
+    let foodProtein = e.target.elements.foodProtein.value;
     let foodFat = e.target.elements.foodFat.value;
+    log(foodName, foodCarb, foodProtein, foodFat);
 
 });

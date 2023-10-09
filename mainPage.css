@@ -61,8 +61,13 @@ body{
 }
 
 .log-container{
-    bottom: 0px;
-    border: 3px solid;
+    display:absolute;
+    height: 250px;
+    width: 600px;
+    border-radius: 15px;
+    padding: 30px;
+    border: 3px solid #faac2f;
+    background-color: #223657;
     /* border: 3px solid; */
 }
 
@@ -139,7 +144,7 @@ button:active{
 
 .entryOdd{
     background-color:#406399;
-    padding: 15px;
+    display: flex;
 }
 
 .entryEven{
@@ -252,4 +257,9 @@ h4{
 
 .hidden{
     display: none;
+}
+
+.entryText{
+    border:3px solid;
+    width: 300px;
 }
