@@ -40,7 +40,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30%;
+    height: 300px;
     /* border: 3px solid; */
 }
 
@@ -56,25 +56,29 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 200px;
     /* border: 3px solid; */
 }
 
 .log-container{
-    margin-top:30px;
     bottom: 0px;
     border: 3px solid;
-    display:none;
     /* border: 3px solid; */
 }
 
 .calc-container{
-    margin-top:30px;
     display:flex;
     justify-content:center;
     align-items:center;
     /* border: 3px solid; */
 }
+
+.entry-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 .form-container{
     display:absolute;
     height: 600px;
@@ -156,9 +160,26 @@ button:active{
 }
 .calcInput:hover{
     background-color:white;
-    color:#406399;
+    color:#0e1a2e;
 }
 input::placeholder{
+    color:#0e1a2e;
+}
+
+.logInput{
+    display:flex;
+    margin: 30px 40px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #406399;
+    color: white;
+    transition: background-color .5s ease;
+    font-weight: 600;
+}
+
+.logInput:hover{
+    background-color:white;
     color:#0e1a2e;
 }
 
@@ -217,14 +238,18 @@ h4{
 #radios{
     display: flex;
 }
-#textsub{
+.textsub{
     display: flex;
 }
 .subbut{
     margin-top:80px;
     border-radius: 50%;
-    transition: background-color .9s ease;
+    transition: background-color .5s ease;
 }
 .subbut:hover{
     background-color:#16294a;
+}
+
+.hidden{
+    display: none;
 }
