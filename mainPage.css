@@ -65,7 +65,6 @@ body{
     height: 250px;
     width: 600px;
     border-radius: 15px;
-    padding: 30px;
     border: 3px solid #faac2f;
     background-color: #223657;
     /* border: 3px solid; */
@@ -142,15 +141,6 @@ button:active{
     width:100%;
 }
 
-.entryOdd{
-    background-color:#406399;
-    display: flex;
-}
-
-.entryEven{
-   background-color: #223657;
-   padding: 15px;
-}
 
 .calcInput{
     display:flex;
@@ -259,7 +249,16 @@ h4{
     display: none;
 }
 
-.entryText{
-    border:3px solid;
-    width: 300px;
+.log-list{
+    list-style-type: none;
+    color:white;
+    padding: 1px;
+}
+.log-list li:nth-child(odd){
+    background-color:#0e1a2e;
+    padding:10px;
+}
+.log-list li:nth-child(even){
+    background-color:#406399;
+    padding:10px;
 }
