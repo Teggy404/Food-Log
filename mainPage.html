@@ -1,130 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="styleSheet" href="mainPage.css">
-        <link rel="icon" type="image/x-icon" href="theDog.png">
-        <title>Logs</title>
-    </head>
-    <body>
-        <div id="strip">   
-            <div class="container"> 
-                <div id="info">
-                    <div class="macro-container">
-                        <div class="macro">
-                            <h3> <span id="carb">0</span>/<span id="carbgoal">0</span>g</h3>
-                            <b class="label">Carbs</b>
-                        </div>
-                        <div class="macro">
-                            <h3> <span id="protein">0</span>/<span id="proteingoal">0</span>g</h3>
-                            <b class="label">Protein</b>
-                        </div>
-                        <div class="macro">
-                            <h3> <span id="fat">0</span>/<span id="fatgoal">0</span>g</h3>
-                            <b class="label">Fat</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="button-container">
-                <button id="calculatorButton" onclick="calculatorClick()">Calculator</button>
-                <button id="logButton" onclick="entryClick()">Log</button>
-            </div>
-            <div id="calculator" class="hidden">
-                <form class="form-container" id="calcdata">
-                    <div class="textsub">
-                        <div>
-                            <h4>Weight (Pounds)</h4>
-                            <input type="number" id="weight" class="calcInput" placeholder="Weight" name="weight">
-                            <h4>Height (Inches)</h4>
-                            <input type="number" id="height" class="calcInput" placeholder="Height" name="height">
-                            <h4>Age</h4>
-                            <input type="number" id="age" class="calcInput" placeholder="Age"  name="age">
-                        </div>
-                        <div>
-                            <input type="image" src="theDog.png" class="subbut" >
-                        </div>
-                    </div>
-                    <div id="radios">
-                        <div id="exercise">
-                            <h4>Exercise Level</h4>
-                            <label class="customRadio" for="sedentary">
-                                <input type="radio"  id="sedentary" name="activity" value="sedentary">
-                                <span class="radioIndicator"></span>
-                                Sedentary
-                            </label>
-                            <label class="customRadio" for="light">
-                                <input type="radio"  id="light" name="activity" value="light">
-                                <span class="radioIndicator"></span>
-                                Light
-                            </label>
-                            <label class="customRadio" for="moderate">
-                                <input type="radio"  id="moderate" name="activity" value="moderate">
-                                <span class="radioIndicator"></span>
-                                Moderate
-                            </label>
-                            <label class="customRadio" for="very">
-                                <input type="radio"  id="very" name="activity" value="very">
-                                <span class="radioIndicator"></span>
-                                Very
-                            </label>
-                            <label class="customRadio" for="extra">
-                                <input type="radio"  id="extra" name="activity" value="extra">
-                                <span class="radioIndicator"></span>
-                                Extra
-                            </label>
-                        </div>
-                        <div id = "goals">
-                            <h4>Goal</h4>
-                            <label class="customRadio" for="lose">
-                                <input type="radio"  id="lose" name="goal" value="lose">
-                                <span class="radioIndicator"></span>
-                                Lose Weight
-                            </label>
-                            <label class="customRadio" for="maintain">
-                                <input type="radio"  id="maintain" name="goal" value="maintain">
-                                <span class="radioIndicator"></span>
-                                Maintain Weight
-                            </label>
-                            <label class="customRadio" for="gain">
-                                <input type="radio"  id="gain" name="goal" value="gain">
-                                <span class="radioIndicator"></span>
-                                Gain Weight
-                            </label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div id="entry" class="hidden">
-                <form class="form-container" id="logdata">
-                    <div class="textsub">
-                        <div>
-                            <h4>Food Name</h4>
-                            <input type="text" id="foodName" class="logInput" placeholder="Name" name="foodName">
-                            <h4>Carbohydrates (Grams)</h4>
-                            <input type="number" id="foodName" class="logInput" placeholder="Carbohydrates" name="foodCarb">
-                            <h4>Protein (Grams)</h4>
-                            <input type="number" id="foodName" class="logInput" placeholder="Protein" name="foodProtein">
-                            <h4>Fat (Grams)</h4>
-                            <input type="number" id="foodName" class="logInput" placeholder="Fat" name="foodFat">
-                        </div>
-                        <div>
-                            <input type="image" src="theDog.png" class="subbut">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="container">
-                <div id="logs" class="log-container">
-                    <ul class="log-list">
-                        <li>FOOD </li>
-                        <li>FOOD</li>
-                        <li>FOOD </li>
-                        <li>FOOD</li>
-                        <li>FOOD </li>
-                    </ul>
-                </div>
-            </div>
+  <head>
+    <link rel="styleSheet" href="mainPage.css" />
+    <link rel="icon" type="image/x-icon" href="theDog.png" />
+    <title>Logs</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="info">
+        <div class="macro-container">
+          <div class="macro">
+            <h3><span id="carb">0</span>/<span id="carbgoal">0</span>g</h3>
+            <b class="label">Carbs</b>
+          </div>
+          <div class="macro">
+            <h3>
+              <span id="protein">0</span>/<span id="proteingoal">0</span>g
+            </h3>
+            <b class="label">Protein</b>
+          </div>
+          <div class="macro">
+            <h3><span id="fat">0</span>/<span id="fatgoal">0</span>g</h3>
+            <b class="label">Fat</b>
+          </div>
         </div>
-        <script src="FoodLog.js"></script>
-    </body>
+      </div>
+    </div>
+    <div class="button-container">
+      <button id="calculatorButton" onclick="calculatorClick()">
+        Calculator
+      </button>
+      <button id="logButton" onclick="entryClick()">Log</button>
+    </div>
+    <div id="calculator" class="hidden">
+      <form class="form-container" id="calcdata">
+        <div class="textsub">
+          <div>
+            <h4>Weight (Pounds)</h4>
+            <input
+              type="number"
+              id="weight"
+              class="calcInput"
+              placeholder="Weight"
+              name="weight"
+            />
+            <h4>Height (Inches)</h4>
+            <input
+              type="number"
+              id="height"
+              class="calcInput"
+              placeholder="Height"
+              name="height"
+            />
+            <h4>Age</h4>
+            <input
+              type="number"
+              id="age"
+              class="calcInput"
+              placeholder="Age"
+              name="age"
+            />
+          </div>
+          <div>
+            <input type="image" src="theDog.png" class="subbut" />
+          </div>
+        </div>
+        <div id="radios">
+          <div id="exercise">
+            <h4>Exercise Level</h4>
+            <label class="customRadio" for="sedentary">
+              <input
+                type="radio"
+                id="sedentary"
+                name="activity"
+                value="sedentary"
+              />
+              <span class="radioIndicator"></span>
+              Sedentary
+            </label>
+            <label class="customRadio" for="light">
+              <input type="radio" id="light" name="activity" value="light" />
+              <span class="radioIndicator"></span>
+              Light
+            </label>
+            <label class="customRadio" for="moderate">
+              <input
+                type="radio"
+                id="moderate"
+                name="activity"
+                value="moderate"
+              />
+              <span class="radioIndicator"></span>
+              Moderate
+            </label>
+            <label class="customRadio" for="very">
+              <input type="radio" id="very" name="activity" value="very" />
+              <span class="radioIndicator"></span>
+              Very
+            </label>
+            <label class="customRadio" for="extra">
+              <input type="radio" id="extra" name="activity" value="extra" />
+              <span class="radioIndicator"></span>
+              Extra
+            </label>
+          </div>
+          <div id="goals">
+            <h4>Goal</h4>
+            <label class="customRadio" for="lose">
+              <input type="radio" id="lose" name="goal" value="lose" />
+              <span class="radioIndicator"></span>
+              Lose Weight
+            </label>
+            <label class="customRadio" for="maintain">
+              <input type="radio" id="maintain" name="goal" value="maintain" />
+              <span class="radioIndicator"></span>
+              Maintain Weight
+            </label>
+            <label class="customRadio" for="gain">
+              <input type="radio" id="gain" name="goal" value="gain" />
+              <span class="radioIndicator"></span>
+              Gain Weight
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="entry" class="hidden">
+      <form class="form-container" id="logdata">
+        <div class="textsub">
+          <div>
+            <h4>Food Name</h4>
+            <input
+              type="text"
+              id="foodName"
+              class="logInput"
+              placeholder="Name"
+              name="foodName"
+            />
+            <h4>Carbohydrates (Grams)</h4>
+            <input
+              type="number"
+              id="foodName"
+              class="logInput"
+              placeholder="Carbohydrates"
+              name="foodCarb"
+            />
+            <h4>Protein (Grams)</h4>
+            <input
+              type="number"
+              id="foodName"
+              class="logInput"
+              placeholder="Protein"
+              name="foodProtein"
+            />
+            <h4>Fat (Grams)</h4>
+            <input
+              type="number"
+              id="foodName"
+              class="logInput"
+              placeholder="Fat"
+              name="foodFat"
+            />
+          </div>
+          <div>
+            <input type="image" src="theDog.png" class="subbut" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <div id="logs" class="log-container">
+        <ul class="log-list">
+          <li>FOOD</li>
+          <li>FOOD</li>
+          <li>FOOD</li>
+          <li>FOOD</li>
+          <li>FOOD</li>
+        </ul>
+      </div>
+    </div>
+    <script src="FoodLog.js"></script>
+  </body>
 </html>
