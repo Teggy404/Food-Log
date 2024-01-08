@@ -7,6 +7,7 @@ const proteinNum = document.getElementById('protein');
 const proteinGoalNum = document.getElementById('proteingoal');
 const fatNum = document.getElementById('fat');
 const fatGoalNum = document.getElementById('fatgoal');
+let logList = document.getElementById('log');
 let userName = "Oscar";
 
 var userInfo ={
@@ -97,6 +98,12 @@ function log(foodName, foodCarb, foodProtein, foodFat){
     userInfo[userName].carb += Number(foodCarb);
     userInfo[userName].protein += Number(foodProtein);
     userInfo[userName].fat += Number(foodFat);
+    let newListItem = document.createElement('li');
+    newListItem.appendChild(document.createTextNode(foodName));
+    newListItem.appendChild(document.createTextNode(foodCarb));
+    newListItem.appendChild(document.createTextNode(foodProtein));
+    newListItem.appendChild(document.createTextNode(foodFat));
+    logList.appendChild(newListItem);
     updateNum();
 }
 
@@ -114,6 +121,7 @@ document.getElementById('calcdata').addEventListener('submit', function(e){
 
 document.getElementById('logdata').addEventListener('submit', function(e){
     e.preventDefault();
+    console.log(e);
     let foodName = e.target.elements.foodName.value;
     let foodCarb = e.target.elements.foodCarb.value;
     let foodProtein = e.target.elements.foodProtein.value;

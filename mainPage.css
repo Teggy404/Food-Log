@@ -55,10 +55,9 @@ body{
 }
 
 .log-container{
-    display:absolute;
-    height: 250px;
-    width: 600px;
-    border-radius: 15px;
+    display:flex;
+    height: 70%;
+    width: 50%;
     border: 3px solid #faac2f;
     background-color: #223657;
     /* border: 3px solid; */
@@ -133,12 +132,6 @@ button:active, input[type="submit"]:active{
     background-color:#406399;
 }
 
-#log{
-    border:3px solid blue;
-    width:100%;
-}
-
-
 input::placeholder{
     color:#0e1a2e;
 }
@@ -173,8 +166,9 @@ input::placeholder{
 
 .radioIndicator {
     position: absolute;
-    width: 10%;
-    height: 80%;
+    width: 6%;
+    margin-top: .5%;
+    padding-top: 6%;
     background-color: #406399;
     border-radius: 50%;
     transition: background-color .5s ease;
@@ -196,6 +190,7 @@ input::placeholder{
 .radio-label{
     font-size: 1.2vh;
     margin-left: 15%;
+    margin-top: 1.5%;
     font-weight:800;
     color: #ffffff;
     font-family: Sans-serif;
@@ -229,6 +224,8 @@ h4{
     list-style-type: none;
     color:white;
     padding: 1px;
+    width:100%;
+    border: none;
 }
 .log-list li:nth-child(odd){
     background-color:#0e1a2e;
