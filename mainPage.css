@@ -1,25 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     height: 100%;
     background-color:#0e1a2e;
 }
 #info{
-    position: absolute;
+    position: flex;
     border: 3px solid;
-    height: 200px;
-    min-width: 350px;
+    height: 90%;
+    min-width: 50%;
     top: 5%;
     border-radius: 20px;
     border-color: #faac2f;
     background-color: #223657;
-    padding: 50px 5%;
+    padding: 5%;
+    margin-top: 5%;
 }
 .macro{
-    height: 100px;
-    width: 150px;
+    height: 80%;
+    width: 60%;
     border: 3px solid;
     /* float: left; */
-    padding: 33px;
+    padding: 5%;
     margin: 0px 3%;
     border-radius: 15px;
     background-color:#16294a;
@@ -30,10 +36,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 300%;
     /* border: 3px solid; */
 }
-
 .macro-container{
     display: flex;
     justify-content: center;
@@ -46,8 +51,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    border: 3px solid; 
+    padding: 1.5%;
 }
 
 .log-container{
@@ -75,10 +79,10 @@ body{
 
 .form-container{
     display:absolute;
-    height: 600px;
-    width: 600px;
+    height: 70%;
+    width: 50%;
     border-radius: 15px;
-    padding: 30px;
+    padding: 3%;
     border: 3px solid #faac2f;
     background-color: #223657;
 }
@@ -89,26 +93,21 @@ h3, .label{
     display: block;
     text-align:center;
     margin: 0;
+    font-size: 2.5vh;
 }
-
-h3{
-    font-size: 28px;
-}
-
 .label{
-    font-size: 18px;
-    margin-top: 30px;
+    margin-top: 20%;
+    font-size: 2vh;
 }
-
 button{
     background-color:#406399;
     border-color:#0e1a2e; 
     border: 5px solid;
     border-radius: 20px;
-    min-width:200px;
-    margin: 0px 20px;
-    padding: 20px;
-    font-size: 20px;
+    min-width:20%;
+    margin: 0px 3%;
+    padding: 1.75%;
+    font-size: 2vh;
     color: #0e1a2e;
     font-family:Sans-serif;
     font-weight: 800;
@@ -134,8 +133,8 @@ button:active{
 
 .calcInput{
     display:flex;
-    margin: 20px 40px;
-    padding: 20px;
+    margin: 20% 40%;
+    padding: 20%;
     border: none;
     border-radius: 20px;
     background-color: #406399;
@@ -153,8 +152,8 @@ input::placeholder{
 
 .logInput{
     display:flex;
-    margin: 30px 40px;
-    padding: 20px;
+    margin: 10% 10%;
+    padding: 10%;
     border: none;
     border-radius: 20px;
     background-color: #406399;
@@ -208,7 +207,8 @@ input::placeholder{
 }
 
 h4{
-    margin-left: 30px;
+    font-size: 1.2vh;
+    margin-left: 10%;
     font-weight:800;
     color: #faac2f;
     font-family: Sans-serif;
