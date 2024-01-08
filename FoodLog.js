@@ -50,10 +50,10 @@ function entryClick (){
     entryDiv.className = 'entry-container';
 }
 
-function setMacros(weight, height, age, activity, goal){
+function setMacros(weight, height, age, activity, goal, gender){
     let weightKg = weight/2.20462;
     let heightCm = height*2.54;
-    let BMR = (10*weightKg) + (6.25*heightCm) - (5*age) + 5;
+    let BMR = gender === 'male'? 88.362+(13.397*weightKg)+(4.799*heightCm)-(5.677)*age:447.593+(9.247*weightKg)+(3.098*heightCm)-(4.330)*age;
     let TDEE = 0;
     switch(activity){
         case 'sedentary':
@@ -101,7 +101,6 @@ function log(foodName, foodCarb, foodProtein, foodFat){
 }
 
 updateNum();
-
 document.getElementById('calcdata').addEventListener('submit', function(e){
     e.preventDefault();
     let weight = e.target.elements.weight.value;
@@ -109,7 +108,8 @@ document.getElementById('calcdata').addEventListener('submit', function(e){
     let age = e.target.elements.age.value;
     let activity = e.target.elements.activity.value;
     let goal = e.target.elements.goal.value;
-    setMacros(weight, height, age, activity, goal);
+    let gender = e.target.elements.sex.value;
+    setMacros(weight, height, age, activity, goal, gender);
 });
 
 document.getElementById('logdata').addEventListener('submit', function(e){

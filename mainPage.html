@@ -61,12 +61,8 @@
               name="age"
             />
           </div>
-          <div>
-            <input type="image" src="theDog.png" class="subbut" />
-          </div>
         </div>
-        <div id="radios">
-          <div id="exercise">
+          <div id="exercise" >
             <h4>Exercise Level</h4>
             <label class="customRadio" for="sedentary">
               <input
@@ -76,12 +72,12 @@
                 value="sedentary"
               />
               <span class="radioIndicator"></span>
-              Sedentary
+              <p class="radio-label">Sedentary</p>
             </label>
             <label class="customRadio" for="light">
               <input type="radio" id="light" name="activity" value="light" />
               <span class="radioIndicator"></span>
-              Light
+              <p class="radio-label">Light</p>
             </label>
             <label class="customRadio" for="moderate">
               <input
@@ -91,38 +87,51 @@
                 value="moderate"
               />
               <span class="radioIndicator"></span>
-              Moderate
+              <p class="radio-label">Moderate</p>
             </label>
             <label class="customRadio" for="very">
               <input type="radio" id="very" name="activity" value="very" />
               <span class="radioIndicator"></span>
-              Very
+              <p class="radio-label">Very</p>
             </label>
             <label class="customRadio" for="extra">
               <input type="radio" id="extra" name="activity" value="extra" />
               <span class="radioIndicator"></span>
-              Extra
+              <p class="radio-label">Extra</p>
             </label>
           </div>
-          <div id="goals">
+          <div id="goals" style="margin-top:3%;">
             <h4>Goal</h4>
             <label class="customRadio" for="lose">
               <input type="radio" id="lose" name="goal" value="lose" />
               <span class="radioIndicator"></span>
-              Lose Weight
+              <p class='radio-label'>Lose </p>
             </label>
             <label class="customRadio" for="maintain">
               <input type="radio" id="maintain" name="goal" value="maintain" />
               <span class="radioIndicator"></span>
-              Maintain Weight
+              <p class='radio-label'>Maintain </p>
             </label>
             <label class="customRadio" for="gain">
               <input type="radio" id="gain" name="goal" value="gain" />
               <span class="radioIndicator"></span>
-              Gain Weight
+              <p class='radio-label'>Gain </p>
             </label>
           </div>
-        </div>
+          <div id="sex" style="margin-top:3%;">
+            <h4>Sex</h4>
+            <label class="customRadio" for="male">
+              <input type="radio" id="male" name="sex" value="male" />
+              <span class="radioIndicator"></span>
+              <p class='radio-label'>male</p>
+            </label>
+            <label class="customRadio" for="female">
+              <input type="radio" id="female" name="sex" value="female" />
+              <span class="radioIndicator"></span>
+              <p class='radio-label'>female</p>
+            </label>
+          </div>
+        <input type="submit"/>
       </form>
     </div>
     <div id="entry" class="hidden">
@@ -161,9 +170,7 @@
               placeholder="Fat"
               name="foodFat"
             />
-          </div>
-          <div>
-            <input type="image" src="theDog.png" class="subbut" />
+            <input type="submit"/>
           </div>
         </div>
       </form>

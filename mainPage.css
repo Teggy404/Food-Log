@@ -100,28 +100,36 @@ h3, .label{
     font-size: 2vh;
 }
 button{
+    margin: 0px 3%;
+    font-size: 2vh;
+    padding: 1.75%;
+}
+input[type="submit"]{
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 1.5vh;
+    padding: 5% 10%;
+}
+button, input[type="submit"]{
     background-color:#406399;
     border-color:#0e1a2e; 
     border: 5px solid;
     border-radius: 20px;
     min-width:20%;
-    margin: 0px 3%;
-    padding: 1.75%;
-    font-size: 2vh;
     color: #0e1a2e;
     font-family:Sans-serif;
     font-weight: 800;
     transition: background-color .5s ease;
 }
 
-button:hover{
+button:hover, input[type="submit"]:hover{
     background-color:#0e1a2e;
     border-color: #faac2f;
     color:#faac2f;
     cursor: pointer;
 }
 
-button:active{
+button:active, input[type="submit"]:active{
     background-color:#406399;
 }
 
@@ -131,29 +139,15 @@ button:active{
 }
 
 
-.calcInput{
-    display:flex;
-    margin: 20% 40%;
-    padding: 20%;
-    border: none;
-    border-radius: 20px;
-    background-color: #406399;
-    color: white;
-    transition: background-color .5s ease;
-    font-weight: 600;
-}
-.calcInput:hover{
-    background-color:white;
-    color:#0e1a2e;
-}
 input::placeholder{
     color:#0e1a2e;
 }
 
-.logInput{
+.logInput, .calcInput{
     display:flex;
     margin: 10% 10%;
     padding: 10%;
+    width: 100%;
     border: none;
     border-radius: 20px;
     background-color: #406399;
@@ -162,7 +156,7 @@ input::placeholder{
     font-weight: 600;
 }
 
-.logInput:hover{
+.logInput:hover, .calcInput:hover{
     background-color:white;
     color:#0e1a2e;
 }
@@ -173,16 +167,14 @@ input::placeholder{
 
 .customRadio {
     position: relative;
-    padding-left: 100px;
     cursor: pointer;
     display: block;
 }
 
 .radioIndicator {
     position: absolute;
-    left: 50px;
-    width: 20px;
-    height: 20px;
+    width: 10%;
+    height: 80%;
     background-color: #406399;
     border-radius: 50%;
     transition: background-color .5s ease;
@@ -201,11 +193,13 @@ input::placeholder{
 .customRadio input[type="radio"]:checked + .radioIndicator{
     background-color: #faac2f;
 }
-
-.radLab{
-    margin: 0px 32px;
+.radio-label{
+    font-size: 1.2vh;
+    margin-left: 15%;
+    font-weight:800;
+    color: #ffffff;
+    font-family: Sans-serif;
 }
-
 h4{
     font-size: 1.2vh;
     margin-left: 10%;
@@ -214,11 +208,9 @@ h4{
     font-family: Sans-serif;
 }
 
-#goals{
-    margin-left: 80px;
-}
-#exercise{
-    margin-left: 40px;
+#goals, #exercise, #sex{
+    margin-left: 5%;
+    width: 40%;
 }
 #radios{
     display: flex;
@@ -226,15 +218,9 @@ h4{
 .textsub{
     display: flex;
 }
-.subbut{
-    margin-top:80px;
-    border-radius: 50%;
-    transition: background-color .5s ease;
+.showBorder{
+    border: 3px solid;
 }
-.subbut:hover{
-    background-color:#16294a;
-}
-
 .hidden{
     display: none;
 }
