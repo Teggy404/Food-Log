@@ -122,53 +122,21 @@ button:hover {
   cursor: pointer;
 }
 
-button:active {
-  background-color: #406399;
-}
-
 #log {
-  border: 3px solid blue;
   width: 100%;
 }
 
-.calcInput {
-  display: flex;
-  margin: 20% 40%;
-  padding: 20%;
-  border: none;
-  border-radius: 20px;
-  background-color: #406399;
-  color: white;
-  transition: background-color 0.5s ease;
-  font-weight: 600;
-}
-.calcInput:hover {
-  background-color: white;
-  color: #0e1a2e;
-}
 input::placeholder {
   color: #0e1a2e;
 }
 
-.logInput {
+input[type="number"],
+input[type="text"] {
   display: flex;
-  margin: 10% 10%;
-  padding: 10%;
-  border: none;
-  border-radius: 20px;
-  background-color: #406399;
-  color: white;
-  transition: background-color 0.5s ease;
-  font-weight: 600;
+  width: 80%;
+  height: 60%;
 }
 
-.logInput:hover {
-  background-color: white;
-  color: #0e1a2e;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   margin: 0;
   height: 100%;
@@ -265,19 +233,16 @@ h3,
   margin-top: 20%;
   font-size: 2vh;
 }
-button {
-  margin: 0px 3%;
-  font-size: 2vh;
-  padding: 1.75%;
-}
+
 input[type="submit"] {
   margin-left: 5%;
   margin-top: 10%;
   font-size: 1.5vh;
   padding: 5% 10%;
 }
-button,
+
 input[type="submit"] {
+  display: flex;
   background-color: #406399;
   border-color: #0e1a2e;
   border: 5px solid;
@@ -289,7 +254,6 @@ input[type="submit"] {
   transition: background-color 0.5s ease;
 }
 
-button:hover,
 input[type="submit"]:hover {
   background-color: #0e1a2e;
   border-color: #faac2f;
@@ -309,8 +273,8 @@ input::placeholder {
 .logInput,
 .calcInput {
   display: flex;
-  margin: 10% 10%;
-  padding: 10%;
+  margin: 5% 10%;
+  padding: 4%;
   width: 100%;
   border: none;
   border-radius: 20px;
@@ -330,26 +294,6 @@ input::placeholder {
   display: none;
 }
 
-.customRadio {
-  position: relative;
-  padding-left: 100px;
-  cursor: pointer;
-  display: block;
-}
-
-.radioIndicator {
-  position: absolute;
-  left: 50px;
-  width: 20px;
-  height: 20px;
-  background-color: #406399;
-  border-radius: 50%;
-  transition: background-color 0.5s ease;
-  position: relative;
-  cursor: pointer;
-  display: block;
-}
-
 .radioIndicator {
   position: absolute;
   width: 6%;
@@ -364,6 +308,9 @@ input::placeholder {
   font-weight: 800;
   color: white;
   font-family: Sans-serif;
+  position: relative;
+  cursor: pointer;
+  display: block;
 }
 .customRadio:hover .radioIndicator {
   background-color: white;
@@ -372,17 +319,6 @@ input::placeholder {
 
 .customRadio input[type="radio"]:checked + .radioIndicator {
   background-color: #faac2f;
-}
-.radLab {
-  margin: 0px 32px;
-}
-
-h4 {
-  font-size: 1.2vh;
-  margin-left: 10%;
-  font-weight: 800;
-  color: #faac2f;
-  font-family: Sans-serif;
 }
 
 #goals {
@@ -401,7 +337,7 @@ h4 {
   font-family: Sans-serif;
 }
 h4 {
-  font-size: 1.2vh;
+  font-size: 1.4vh;
   margin-left: 10%;
   font-weight: 800;
   color: #faac2f;
@@ -414,18 +350,7 @@ h4 {
   margin-left: 5%;
   width: 40%;
 }
-#radios {
-  display: flex;
-}
-.textsub {
-  display: flex;
-}
 
-.subbut {
-  margin-top: 80px;
-  border-radius: 50%;
-  transition: background-color 0.5s ease;
-}
 .subbut:hover {
   background-color: #16294a;
 }
