@@ -7,6 +7,7 @@ const proteinNum = document.getElementById('protein');
 const proteinGoalNum = document.getElementById('proteingoal');
 const fatNum = document.getElementById('fat');
 const fatGoalNum = document.getElementById('fatgoal');
+let logList = document.getElementById('log');
 let userName = "Oscar";
 
 var userInfo ={
@@ -50,10 +51,10 @@ function entryClick (){
     entryDiv.className = 'entry-container';
 }
 
-function setMacros(weight, height, age, activity, goal){
+function setMacros(weight, height, age, activity, goal, gender){
     let weightKg = weight/2.20462;
     let heightCm = height*2.54;
-    let BMR = (10*weightKg) + (6.25*heightCm) - (5*age) + 5;
+    let BMR = gender === 'male'? 88.362+(13.397*weightKg)+(4.799*heightCm)-(5.677)*age:447.593+(9.247*weightKg)+(3.098*heightCm)-(4.330)*age;
     let TDEE = 0;
     switch(activity){
         case 'sedentary':
@@ -97,11 +98,16 @@ function log(foodName, foodCarb, foodProtein, foodFat){
     userInfo[userName].carb += Number(foodCarb);
     userInfo[userName].protein += Number(foodProtein);
     userInfo[userName].fat += Number(foodFat);
+    let newListItem = document.createElement('li');
+    newListItem.appendChild(document.createTextNode(foodName));
+    newListItem.appendChild(document.createTextNode(foodCarb));
+    newListItem.appendChild(document.createTextNode(foodProtein));
+    newListItem.appendChild(document.createTextNode(foodFat));
+    logList.appendChild(newListItem);
     updateNum();
 }
 
 updateNum();
-
 document.getElementById('calcdata').addEventListener('submit', function(e){
     e.preventDefault();
     let weight = e.target.elements.weight.value;
@@ -109,11 +115,13 @@ document.getElementById('calcdata').addEventListener('submit', function(e){
     let age = e.target.elements.age.value;
     let activity = e.target.elements.activity.value;
     let goal = e.target.elements.goal.value;
-    setMacros(weight, height, age, activity, goal);
+    let gender = e.target.elements.sex.value;
+    setMacros(weight, height, age, activity, goal, gender);
 });
 
 document.getElementById('logdata').addEventListener('submit', function(e){
     e.preventDefault();
+    console.log(e);
     let foodName = e.target.elements.foodName.value;
     let foodCarb = e.target.elements.foodCarb.value;
     let foodProtein = e.target.elements.foodProtein.value;
