@@ -94,11 +94,11 @@ h3,
   display: block;
   text-align: center;
   margin: 0;
-  font-size: 2.5vh;
+  font-size: 2.5vw;
 }
 .label {
   margin-top: 20%;
-  font-size: 2vh;
+  font-size: 2vw;
 }
 button {
   background-color: #406399;
@@ -108,7 +108,7 @@ button {
   min-width: 20%;
   margin: 0px 3%;
   padding: 1.75%;
-  font-size: 2vh;
+  font-size: 2vw;
   color: #0e1a2e;
   font-family: Sans-serif;
   font-weight: 800;
@@ -135,6 +135,7 @@ input[type="text"] {
   display: flex;
   width: 80%;
   height: 60%;
+  font-size: 1.2vw;
 }
 
 body {
@@ -227,17 +228,17 @@ h3,
   display: block;
   text-align: center;
   margin: 0;
-  font-size: 2.5vh;
+  font-size: 2.5vw;
 }
 .label {
   margin-top: 20%;
-  font-size: 2vh;
+  font-size: 2vw;
 }
 
 input[type="submit"] {
   margin-left: 5%;
   margin-top: 10%;
-  font-size: 1.5vh;
+  font-size: 1.5vw;
   padding: 5% 10%;
 }
 
@@ -329,7 +330,7 @@ input::placeholder {
 }
 
 .radio-label {
-  font-size: 1.2vh;
+  font-size: 1.2vw;
   margin-left: 15%;
   margin-top: 1.5%;
   font-weight: 800;
@@ -337,7 +338,7 @@ input::placeholder {
   font-family: Sans-serif;
 }
 h4 {
-  font-size: 1.4vh;
+  font-size: 1.4vw;
   margin-left: 10%;
   font-weight: 800;
   color: #faac2f;
