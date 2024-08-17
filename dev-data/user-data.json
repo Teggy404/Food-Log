@@ -1,0 +1,63 @@
+[
+  {
+    "username": "Oscar Salcido",
+    "id": 1,
+    "age": 22,
+    "carb": 0,
+    "protein": 0,
+    "fat": 0,
+    "carb-goal": 0,
+    "protein-goal": 0,
+    "fat-goal": 0,
+    "food-items": []
+  },
+  {
+    "username": "Trippie Redd",
+    "id": 2,
+    "age": 25,
+    "carb": 0,
+    "protein": 0,
+    "fat": 0,
+    "carb-goal": 150,
+    "protein-goal": 150,
+    "fat-goal": 30,
+    "food-items": []
+  },
+  {
+    "username": "Travis Scott",
+    "id": 3,
+    "age": 33,
+    "carb": 0,
+    "protein": 0,
+    "fat": 0,
+    "carb-goal": 316,
+    "protein-goal": 170,
+    "fat-goal": 60,
+    "food-items": []
+  },
+  {
+    "username": "Barry Kramer",
+    "id": 4,
+    "age": 23
+  },
+  {
+    "username": "Glizzy Gobbler",
+    "id": 5,
+    "age": 23
+  },
+  {
+    "username": "digg sugger",
+    "id": 6,
+    "age": 23
+  },
+  {
+    "username": "Joe Byron",
+    "id": 7,
+    "age": 23
+  },
+  {
+    "id": 8,
+    "username": "The Diddler",
+    "age": 28
+  }
+]
