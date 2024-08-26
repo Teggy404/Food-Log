@@ -1,6 +1,7 @@
 //SERVER
 const app = require('./app')
 const dotenv = require('dotenv')
+const mongoose = require('mongoose')
 
 dotenv.config({path: './config.env'})//saves config variables into nodejs enviroment variables
 
@@ -12,13 +13,7 @@ mongoose.connect(dataBase, {
     console.log('Database connection succesful!')
 })
 
-testUser.save().then(doc => {
-    console.log(doc);
-}).catch(err => {
-    console.log(err);
-});
-
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on port: ${port}...`);
 });

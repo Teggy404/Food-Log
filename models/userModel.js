@@ -29,8 +29,10 @@ const userSchema = new mongoose.Schema({ //Schema for User document
     fat: {
         type: Number,
         default: 0
-    }
-    
+    },
+    foods: [{
+        type: mongoose.Schema.Types.ObjectId, ref:'Food'
+    }] 
 });
 
 const User = mongoose.model('User', userSchema);//Model for user using the previously defined shema
