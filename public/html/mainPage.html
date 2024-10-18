@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="styleSheet" href="../css/mainPage.css" />
+  <link rel="icon" type="image/x-icon" href="/images/theDog.png" />
+  <title>Logs</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="info">
+      <div class="macro-container">
+        <div class="macro">
+          <h3><span id="carb">
+              <%=foundUser.carb%>
+            </span>/<span id="carbgoal">
+              <%=foundUser.carbGoal%>
+            </span>g</h3>
+          <b class="label">Carbs</b>
+        </div>
+        <div class="macro">
+          <h3>
+            <span id="protein">
+              <%=foundUser.protein%>
+            </span>/<span id="proteingoal">
+              <%=foundUser.proteinGoal%>
+            </span>g
+          </h3>
+          <b class="label">Protein</b>
+        </div>
+        <div class="macro">
+          <h3><span id="fat">
+              <%=foundUser.fat%>
+            </span>/<span id="fatgoal">
+              <%=foundUser.fatGoal%>
+            </span>g</h3>
+          <b class="label">Fat</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button id="calculatorButton" onclick="calculatorClick()">
+      Calculator
+    </button>
+    <button id="logButton" onclick="entryClick()">Log</button>
+  </div>
+  <div id="calculator" class="hidden">
+    <form class="form-container" id="calcdata">
+      <div class="textsub">
+        <div>
+          <h4>Weight (Pounds)</h4>
+          <input type="number" id="weight" class="calcInput" placeholder="Weight" name="weight" />
+          <h4>Height (Inches)</h4>
+          <input type="number" id="height" class="calcInput" placeholder="Height" name="height" />
+          <h4>Age</h4>
+          <input type="number" id="age" class="calcInput" placeholder="Age" name="age" />
+        </div>
+      </div>
+      <div id="exercise">
+        <h4>Exercise Level</h4>
+        <label class="customRadio" for="sedentary">
+          <input type="radio" id="sedentary" name="activity" value="sedentary" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Sedentary</p>
+        </label>
+        <label class="customRadio" for="light">
+          <input type="radio" id="light" name="activity" value="light" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Light</p>
+        </label>
+        <label class="customRadio" for="moderate">
+          <input type="radio" id="moderate" name="activity" value="moderate" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Moderate</p>
+        </label>
+        <label class="customRadio" for="very">
+          <input type="radio" id="very" name="activity" value="very" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Very</p>
+        </label>
+        <label class="customRadio" for="extra">
+          <input type="radio" id="extra" name="activity" value="extra" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Extra</p>
+        </label>
+      </div>
+      <div id="goals" style="margin-top: 3%">
+        <h4>Goal</h4>
+        <label class="customRadio" for="lose">
+          <input type="radio" id="lose" name="goal" value="lose" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Lose</p>
+        </label>
+        <label class="customRadio" for="maintain">
+          <input type="radio" id="maintain" name="goal" value="maintain" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Maintain</p>
+        </label>
+        <label class="customRadio" for="gain">
+          <input type="radio" id="gain" name="goal" value="gain" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">Gain</p>
+        </label>
+      </div>
+      <div id="sex" style="margin-top: 3%">
+        <h4>Sex</h4>
+        <label class="customRadio" for="male">
+          <input type="radio" id="male" name="sex" value="male" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">male</p>
+        </label>
+        <label class="customRadio" for="female">
+          <input type="radio" id="female" name="sex" value="female" />
+          <span class="radioIndicator"></span>
+          <p class="radio-label">female</p>
+        </label>
+      </div>
+      <input type="submit" />
+    </form>
+  </div>
+  <div id="entry" class="hidden">
+    <form class="form-container" id="logdata">
+      <div class="textsub">
+        <div>
+          <h4>Food Name</h4>
+          <input type="text" id="foodName" class="logInput" placeholder="Name" name="foodName" />
+          <h4>Carbohydrates (Grams)</h4>
+          <input type="number" id="foodCarb" class="logInput" placeholder="Carbohydrates" name="foodCarb" />
+          <h4>Protein (Grams)</h4>
+          <input type="number" id="foodProtein" class="logInput" placeholder="Protein" name="foodProtein" />
+          <h4>Fat (Grams)</h4>
+          <input type="number" id="foodFat" class="logInput" placeholder="Fat" name="foodFat" />
+          <input type="submit" />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <div id="logs" class="log-container">
+      <ul class="log-list" id="log">
+
+        <% for (let i=0; i<foundUser.foods.length; i++){%>
+          <li>
+            <%=foundUser.foods[i].name%>
+          </li>
+          <%}%>
+
+      </ul>
+    </div>
+  </div>
+  <script src="/js/FoodLog.js"></script>
+</body>
+
+</html>

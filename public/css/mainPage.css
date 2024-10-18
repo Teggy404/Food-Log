@@ -195,6 +195,7 @@ body {
   width: 50%;
   border: 3px solid #faac2f;
   background-color: #223657;
+  overflow: hidden;
   /* border: 3px solid; */
 }
 
@@ -360,19 +361,10 @@ h4 {
   display: none;
 }
 
-.log-list {
-  list-style-type: none;
-  color: white;
-  padding: 1px;
-}
-.log-list li:nth-child(odd) {
-  background-color: #0e1a2e;
-  padding: 10px;
-}
-
 .showBorder {
   border: 3px solid;
 }
+
 .hidden {
   display: none;
 }
@@ -382,9 +374,15 @@ h4 {
   color: white;
   padding: 1px;
   width: 100%;
-  border: none;
+  overflow: hidden;
 }
+
 .log-list li:nth-child(even) {
   background-color: #406399;
+  padding: 10px;
+}
+
+.log-list li:nth-child(odd) {
+  background-color: #0e1a2e;
   padding: 10px;
 }

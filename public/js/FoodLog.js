@@ -91,7 +91,6 @@ function setMacros(weight, height, age, activity, goal, gender){
     userInfo[userName].goalCarb= Math.floor(carb);
     userInfo[userName].goalProtein = Math.floor(protein);
     userInfo[userName].goalFat = Math.floor(fat);
-    updateNum();
 }
 
 function log(foodName, foodCarb, foodProtein, foodFat){
@@ -104,10 +103,8 @@ function log(foodName, foodCarb, foodProtein, foodFat){
     newListItem.appendChild(document.createTextNode(foodProtein));
     newListItem.appendChild(document.createTextNode(foodFat));
     logList.appendChild(newListItem);
-    updateNum();
 }
 
-updateNum();
 document.getElementById('calcdata').addEventListener('submit', function(e){
     e.preventDefault();
     let weight = e.target.elements.weight.value;
