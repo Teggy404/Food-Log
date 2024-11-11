@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <!-- INFO CONTAINER -->
   <div class="container">
     <div id="info">
       <div class="macro-container">
@@ -40,12 +41,14 @@
       </div>
     </div>
   </div>
+  <!-- BUTTON CONTAINER -->
   <div class="button-container">
     <button id="calculatorButton" onclick="calculatorClick()">
       Calculator
     </button>
     <button id="logButton" onclick="entryClick()">Log</button>
   </div>
+  <!-- CALCULATOR -->
   <div id="calculator" class="hidden">
     <form class="form-container" id="calcdata">
       <div class="textsub">
@@ -140,17 +143,14 @@
   <div class="container">
     <div id="logs" class="log-container">
       <ul class="log-list" id="log">
-
         <% for (let i=0; i<foundUser.foods.length; i++){%>
           <li>
             <%=foundUser.foods[i].name%>
           </li>
           <%}%>
-
       </ul>
     </div>
   </div>
   <script src="/js/FoodLog.js"></script>
 </body>
-
 </html>
