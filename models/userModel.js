@@ -31,7 +31,8 @@ const userSchema = new mongoose.Schema({ //Schema for User document
         default: 0
     },
     foods: [{
-        type: mongoose.Schema.Types.ObjectId, ref:'Food'
+        type: mongoose.Schema.Types.ObjectId, 
+        ref:'Food'
     }] 
 });
 

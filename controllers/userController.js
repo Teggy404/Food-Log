@@ -1,4 +1,3 @@
-const { findByIdAndUpdate } = require('../models/foodModel');
 const User = require('./../models/userModel');
 
 exports.getAllUsers = async (req, res) => {
@@ -20,17 +19,14 @@ exports.getAllUsers = async (req, res) => {
 exports.getUser = async (req, res) => {
   try{
     const userId = req.params.id;
-    const foundUser = await User.findById(userId);
+    const foundUser = await User.findById(userId).populate('foods');
     if(!foundUser){
       return res.status(404).json({
         status:'error',
         error:'User not found'
       });
     }
-    return res.status(200).json({
-      status:'success',
-      user:foundUser
-    });
+    return res.status(200).render('mainPage', {foundUser});
   }
   catch(error){
     return res.status(500).json({
@@ -43,7 +39,11 @@ exports.getUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try{
     const userId = req.params.id;
-    const updates = req.body;
+    const updates = {
+      ...req.body,
+      $push: { foods: req.body.foodId}
+    };
+    console.log(req.body.foodId);
     const updatedUser = await User.findByIdAndUpdate(userId, updates, {
       new:true,
       runValidators:true
@@ -74,10 +74,25 @@ exports.deleteUser = (req, res) => {
     });
   };
   
-exports.addUser = (req, res) => {
+exports.addUser = async (req, res) => {
     //add a new user
-    res.status(201).json({
-      status: "success",
+    try{
+      const {userName, carbGoal, proteinGoal, fatGoal} = req.body;
+      const savedUser = await User.create({
+        userName: userName,
+        carbGoal: carbGoal,
+        proteinGoal: proteinGoal,
+        fatGoal: fatGoal
+      });
+      return res.status(200).json({
+        status:"success",
+        savedUser: savedUser
+      });
     }
-  );
+    catch(error){
+      return res.status(500).json({
+        status: 'Error',
+        error: error.message
+      })
+    }
 };
