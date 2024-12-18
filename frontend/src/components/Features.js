@@ -5,7 +5,7 @@ function Features(){
         <Container>
         <Row className="justify-content-center">
           <Col md={4}>
-          <Card className="text-light bg-dark shadow-lg m-2">
+          <Card className="custom-navbar shadow-lg mt-4">
             <Card.Img variant="top" src="/log.jfif"/>
                 <Card.Body>
                     <Card.Title>Your Log</Card.Title>
@@ -18,7 +18,7 @@ function Features(){
             </Card>
           </Col>
           <Col md={4}>
-          <Card className="text-light bg-dark shadow-lg m-2">
+          <Card className="custom-navbar shadow-lg mt-4">
             <Card.Img variant="top" src="/search.jfif" />
                 <Card.Body>
                     <Card.Title>Search Food</Card.Title>
@@ -31,7 +31,7 @@ function Features(){
             </Card>
           </Col>
           <Col md={4}>
-          <Card className="text-light bg-dark shadow-lg m-2">
+          <Card className="custom-navbar shadow-lg mt-4">
             <Card.Img variant="top" src="/calculator.jfif" />
                 <Card.Body>
                     <Card.Title>Calculator</Card.Title>

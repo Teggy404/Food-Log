@@ -1,8 +1,17 @@
 body {
-    background-color: #414141; /* Replace with your preferred color */
+    background-color: #D8C4B6; /* Replace with your preferred color */
   }
 
 .custom-navbar {
-    background-color: #313131; /* Replace with your preferred color */
+    background-color: #213555; /* Replace with your preferred color */
     color: #ffffff; /* Text color */
+}
+
+.card-color {
+    background-color: #3E5879;
+    color: #F5EFE7
+}
+
+.container-light {
+    background-color: #F5EFE7
 }
