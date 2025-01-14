@@ -2,16 +2,61 @@ body {
     background-color: #D8C4B6; /* Replace with your preferred color */
   }
 
-.custom-navbar {
-    background-color: #213555; /* Replace with your preferred color */
-    color: #ffffff; /* Text color */
+.custom-modal .modal-header {
+    background-color: #222831;
+    color: #EEEEEE;
 }
 
-.card-color {
-    background-color: #3E5879;
-    color: #F5EFE7
+.custom-modal .modal-content {
+    background-color: #31363F;
+    color: #EEEEEE;
 }
 
-.container-light {
-    background-color: #F5EFE7
+.custom-modal .form-control {
+    background-color: #222831;
+    border-color: #76ABAE;
+    color: #EEEEEE;
+}
+
+.custom-modal .form-control:focus{
+    background-color: #222831;
+    border-color: #76ABAE;
+    color: #EEEEEE;
+    box-shadow: 0 0 0 0.25rem rgba(118, 171, 174, 0.25);
+}
+
+.custom-modal .form-control::placeholder{
+    color: #EEEEEE;
+    opacity: 0.5;
+}
+
+.custom-modal .form-check-input:checked {
+    background-color: #76ABAE;
+    border-color: #76ABAE;
+}
+
+.custom-modal .form-check-label {
+    color: #EEEEEE
+}
+
+
+.custom-modal .text-muted {
+    color: #EEEEEE !important;
+    opacity: 0.7;
+}
+
+.custom-modal .card {
+    color: #EEEEEE;
+    background-color: #222831;
+    
+}
+.custom-button {
+    background-color: #76ABAE !important;
+    border-color: #76ABAE !important;
+    color: #222831 !important;
+}
+
+.custom-button:hover {
+    background-color: #5f8a8d !important;
+    border-color: #5f8a8d !important;
 }

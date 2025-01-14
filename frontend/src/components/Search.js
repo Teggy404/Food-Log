@@ -35,6 +35,7 @@ function Search(props) {
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
+      className="custom-modal"
       centered
     >
       <Modal.Header closeButton>
@@ -52,7 +53,11 @@ function Search(props) {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <Button type="submit" disabled={isLoading}>
+            <Button 
+              type="submit" 
+              disabled={isLoading}
+              className="custom-button"
+              >
               {isLoading ? 'Searching...' : 'Search'}
             </Button>
           </Form.Group>
@@ -91,7 +96,7 @@ function Search(props) {
                 <Button
                   variant="outline-primary"
                   size="sm"
-                  className="mt-2"
+                  className="mt-2 custom-button"
                   onClick={() => {
                     console.log('Add to log:', food);
                   }}
