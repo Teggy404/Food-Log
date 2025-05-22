@@ -1,55 +1,104 @@
 body {
-    background-color: #D8C4B6; /* Replace with your preferred color */
+    background-color: #1A1E23 !important; /* Dark charcoal background */
   }
 
+.custom-navbar {
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+    border-bottom: 2px solid #76ABAE !important;
+}
+
+.custom-navbar a, .custom-navbar .navbar-brand {
+    color: #EEEEEE !important;
+}
+
+.feature-card {
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+    border: 1px solid #76ABAE !important;
+}
+
+.container-light {
+    background-color: #31363F !important;
+    color: #EEEEEE !important;
+    border: 1px solid #76ABAE !important;
+}
+
+.card-color {
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+    border: 1px solid #76ABAE !important;
+}
+
+/* For table styles */
+.table-dark, .table-striped>tbody>tr:nth-of-type(odd)>* {
+    color: #EEEEEE !important;
+    background-color: #222831 !important;
+    border-color: #76ABAE !important;
+}
+
+.table-dark {
+    border: 1px solid #76ABAE !important;
+}
+
+.table-dark th, .table-dark td {
+    border-color: #76ABAE !important;
+}
+
 .custom-modal .modal-header {
-    background-color: #222831;
-    color: #EEEEEE;
+    background-color: #222831 !important;
+    color: #EEEEEE !important;
+    border-bottom: 1px solid #76ABAE !important;
 }
 
 .custom-modal .modal-content {
-    background-color: #31363F;
-    color: #EEEEEE;
+    background-color: #31363F !important;
+    color: #EEEEEE !important;
+    border: 1px solid #76ABAE !important;
+}
+
+.custom-modal .modal-footer {
+    border-top: 1px solid #76ABAE !important;
 }
 
 .custom-modal .form-control {
-    background-color: #222831;
-    border-color: #76ABAE;
-    color: #EEEEEE;
+    background-color: #222831 !important;
+    border-color: #76ABAE !important;
+    color: #EEEEEE !important;
 }
 
 .custom-modal .form-control:focus{
-    background-color: #222831;
-    border-color: #76ABAE;
-    color: #EEEEEE;
-    box-shadow: 0 0 0 0.25rem rgba(118, 171, 174, 0.25);
+    background-color: #222831 !important;
+    border-color: #76ABAE !important;
+    color: #EEEEEE !important;
+    box-shadow: 0 0 0 0.25rem rgba(118, 171, 174, 0.25) !important;
 }
 
 .custom-modal .form-control::placeholder{
-    color: #EEEEEE;
-    opacity: 0.5;
+    color: #EEEEEE !important;
+    opacity: 0.5 !important;
 }
 
 .custom-modal .form-check-input:checked {
-    background-color: #76ABAE;
-    border-color: #76ABAE;
+    background-color: #76ABAE !important;
+    border-color: #76ABAE !important;
 }
 
 .custom-modal .form-check-label {
-    color: #EEEEEE
+    color: #EEEEEE !important;
 }
-
 
 .custom-modal .text-muted {
     color: #EEEEEE !important;
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 
 .custom-modal .card {
-    color: #EEEEEE;
-    background-color: #222831;
-    
+    color: #EEEEEE !important;
+    background-color: #222831 !important;
+    border: 1px solid #76ABAE !important;
 }
+
 .custom-button {
     background-color: #76ABAE !important;
     border-color: #76ABAE !important;

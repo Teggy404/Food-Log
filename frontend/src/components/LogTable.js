@@ -3,7 +3,7 @@ import {Table, Container} from 'react-bootstrap';
 function LogTable(){
     return(
         <Container>
-                <Table className='table table-striped' variant='dark'>
+                <Table className='table-dark table-striped' variant='dark'>
                     <thead>
                         <tr>
                             <th scope="col">FoodName</th>

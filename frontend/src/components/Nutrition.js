@@ -6,7 +6,7 @@ import './../App.css'
 function NutritionPanel(){
     return(
         <div>
-            <Card className="text-light container-light shadow-lg mt-4">
+            <Card className="container-light shadow-lg mt-4 text-light">
                 <Card.Body>
                     <MacroPanel/>
                     <LogTable/>
